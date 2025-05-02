@@ -5,7 +5,7 @@ import logo from "../../Assets/logo1.jpeg"
 const SpliseScreen = ({navigation}) => {
 
 setTimeout(()=>{
-navigation.replace('Home')
+navigation.replace('intermittentFasting')
 },5000)
 
   return (

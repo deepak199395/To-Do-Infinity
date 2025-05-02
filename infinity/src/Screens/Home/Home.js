@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import logo from "../../Assets/logo1.jpeg";
 import { useNavigation } from '@react-navigation/native';
+import Fitness from '../Fitness/Fitness';
 
 const Home = () => {
     const navigation = useNavigation();
@@ -15,6 +16,9 @@ const Home = () => {
            
             <ScrollView>
             <View style={styles.body}>
+            <TouchableOpacity style={[styles.option, { backgroundColor: '#FF6F61' }]} onPress={() => handleChange('Fitness')}>
+                    <Text style={styles.optionText}>🗞 Fitness</Text>
+                </TouchableOpacity>
                 <TouchableOpacity style={[styles.option, { backgroundColor: '#FF6F61' }]} onPress={() => handleChange('ToDoList')}>
                     <Text style={styles.optionText}>📋 To-Do List</Text>
                 </TouchableOpacity>
@@ -50,6 +54,7 @@ const Home = () => {
                 <TouchableOpacity style={[styles.option, { backgroundColor: '#FF6F61' }]} onPress={() => handleChange('Bills')}>
                     <Text style={styles.optionText}>🗞 Bills</Text>
                 </TouchableOpacity>
+               
             </View>
             </ScrollView>
         </View>
